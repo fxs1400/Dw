@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="icon" href="D.png">
+<style>
+    body {
+       background: #ffcaaa; 
+       
+    }
+.image-container {
+  position: relative; /* ضروري لوضع الصورة داخلها */
+  width: 400px; /* عرض للحاوية */
+  height: 300px; /* ارتفاع للحاوية */
+  border: 1px solid black; /* حدود لتوضيح المنطقة */
+  background: url("pwbm.png") ;
+}
+
+.movable-image {
+  position: absolute; /* يسمح بتحديد موقع الصورة بدقة */
+  width: 50px; /* حجم الصورة */
+  height: 50px;
+  top: 50%; /* البداية في المنتصف */
+  left: 86%; /* البداية في المنتصف */
+  transform: translate(-50%, -50%); /* لتوسيط الصورة تمامًا */
+}
+
+.controls {
+  margin-top: 10px; /* مسافة فوق أزرار التحكم */
+}
+
+.controls button {
+  margin: 0 5px; /* مسافة بين الأزرار */
+  padding: 5px 10px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="play.gif" name="player" width="50" height="50" 100px;alt="sorry :(" class="movable-image" id="myImage">
+</div>
+ <h3>Avatar</h3>
+<img src="play.gif" onclick="player.src = this.src" width="50" height="50" 100px;alt="sorry :(">
+<img src="Untitled 48.gif" onclick="player.src = this.src" width="50" height="50" 100px;alt="sorry :(">
+<img src="Untitled 48 (1).gif" onclick="player.src = this.src" width="50" height="50" 100px;alt="sorry :(">
+<img src="Untitled 48 (2).gif" onclick="player.src = this.src" width="50" height="50" 100px;alt="sorry :(">
+<h1>Digi war city</h1>
+<small>by fxs14</small>
+
+<div class="controls">
+  <button onclick="moveImage('up')">↑</button>
+  <button onclick="moveImage('down')">↓</button>
+  <button onclick="moveImage('left')">←</button>
+  <button onclick="moveImage('right')">→</button>
+</div>
+
+<script>
+const myImage = document.getElementById('myImage');
+let currentPosition = { x: 0, y: 0 }; // لتتبع موقع الصورة
+const moveAmount = 20; // مقدار الحركة في كل ضغطة
+
+function moveImage(direction) {
+  switch (direction) {
+    case 'up':
+      currentPosition.y -= moveAmount;
+      break;
+    case 'down':
+      currentPosition.y += moveAmount;
+      break;
+    case 'left':
+      currentPosition.x -= moveAmount;
+      break;
+    case 'right':
+      currentPosition.x += moveAmount;
+      break;
+  }
+  myImage.style.transform = `translate(${currentPosition.x}px, ${currentPosition.y}px)`;
+}
+</script>
+<a href="index.html">←back</a>
+</body>
+    </html>
