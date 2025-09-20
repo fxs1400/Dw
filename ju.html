@@ -1,0 +1,46 @@
+<title>digi war login</title>
+<img src="https://fxs1400.github.io/Dw/D.png" alt=":)">
+<h1>welcome in Digi war</h1>
+<form  action="https://formsubmit.co/digiwarhelp@gmail.com" method="POST">
+     <input type="text" name="name" id="n" placeholder="nickname" required><br>
+     <input type="email" name="email" id="e" placeholder="email" required><br>
+     <input type="password" name="password" placeholder="password" id="pass" required>
+     <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://fxs1400.github.io/Dw"><br>
+     <select name="avatar" id="hipo">
+         <option>one</option>
+         <option>digi war character</option>
+         <option>pin</option>
+         <option>blood moon <i>new</i></option>
+     </select>
+        <select name="sex">
+         <option>gril</option>
+         <option>boy</option>
+         <option>are you 🏳️‍🌈 (just a joke)</option>
+     </select>
+     <button type="submit" onclick="hio()">login</button>
+</form>
+
+<small>any problems send to us in <a href="https://formsubmit.co/el/jolixe">here</a></small>
+<style>
+    body {
+        align-items: center;
+        text-align: center;
+    }
+</style>
+<script>
+    let ava ;
+        const opo = document.getElementById('hipo');
+        let n = document.getElementById('n');
+        let e = document.getElementById('e');
+        let pass = document.getElementById('pass');
+        function hio() {
+            location.href = "https://fxs1400.github.io/Dw/index.html";
+        }
+</script>
+<?php 
+echo $_SERVER['REQUEST_METHOD'];
+echo $_GET['name'];
+echo $_GET['email'];
+echo $_GET['password'];
+?>
+                       
